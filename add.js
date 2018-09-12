@@ -1,6 +1,7 @@
-module.export = function(app, db, dbName){
+module.exports = function(app, db){
    app.post("/add", function(req, res) {
-     db.collection(dbName).insertOne(req.body);
+     var dbName = req.body.name
+     db.collection(dbName).insertOne(req.body.insertion);
    });
 
 }

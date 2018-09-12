@@ -1,5 +1,6 @@
-module.export = function(app, db, dbName){
+module.exports = function(app, db){
   app.post("/update", function(req, res) {
+    var dbName = req.body.name;
     var oldQ = req.body.oldVal;
     var newVals = req.body.newVal;
     db.collection(dbName).updateOne(oldQ, oldVals, function(err, res) {
