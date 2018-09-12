@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ReidDurden/mongoLab/issues"
   },
-  "homepage": "https://github.com/ReidDurden/mongoLab#readme"
+  "homepage": "https://github.com/ReidDurden/mongoLab#readme",
+  "dependencies": {
+    "mongodb": "^3.1.4"
+  }
 }
