@@ -1,7 +1,15 @@
-module.exports = function(app, db){
-   app.post("/add", function(req, res) {
-     var dbName = req.body.name
-     db.collection(dbName).insertOne(req.body.insertion);
-   });
+module.exports =
+{
+  addData: async function(db, productDetails){
+    const collection = db.collection('products');
 
+    var myobj = productDetails;
+     await collection.insertOne(myobj, function(err, res) {
+      if (err) throw err;
+      console.log("1 document inserted");
+    });
+
+
+    return;
+  }
 }
